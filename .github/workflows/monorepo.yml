@@ -1,18 +1,17 @@
-name: Monorepo
+name: Monorepo Release
 
 on:
-  repository_dispatch:
-    types: trigger-release
+  push:
+    tags: 'v*'
 
 jobs:
 
-  release:
+  split:
     runs-on: ubuntu-latest
 
     env:
       cache_version: 0 # increment to flush all caches
       php_version: '7.3'
-      GITHUB_AUTH_TOKEN: '' # avoid fatal error when booting monorepo-builder
 
     steps:
 
@@ -24,7 +23,7 @@ jobs:
         with:
           php-version: ${{ env.php_version }}
           coverage: none
-          tools: codeception, composer
+          tools: composer
 
       - name: Get composer cache directory
         id: composer-cache
@@ -41,5 +40,5 @@ jobs:
       - name: Install composer dependencies
         run: composer install --prefer-dist --no-progress --no-suggest --optimize-autoloader
 
-      - name: Build the release
-        run: vendor/bin/monorepo-builder release "${{ github.event.client_payload.version }}" --stage=release
+      - name: Split the package mini-repos
+        run: vendor/bin/monorepo-builder split
