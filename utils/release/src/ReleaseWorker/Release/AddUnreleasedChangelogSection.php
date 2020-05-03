@@ -21,7 +21,7 @@ class AddUnreleasedChangelogSection implements ReleaseWorkerInterface {
 		}
 
 		$changelogFileContent = FileSystem::read( $changelogFilePath );
-		$changelogFileContent = Strings::replace( $changelogFileContent, '/## /', "## Unreleased\n\n##", 1 );
+		$changelogFileContent = Strings::replace( $changelogFileContent, '/## /', "## Unreleased\n\n## ", 1 );
 
 		FileSystem::write( $changelogFilePath, $changelogFileContent );
 	}
