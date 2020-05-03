@@ -10,7 +10,7 @@
     "minimum-stability": "dev",
     "require": {
         "php": "^7.0",
-        "jbrinley/monorepo-container": "^0.5.9"
+        "jbrinley/monorepo-container": "^0.6"
     },
     "autoload": {
         "psr-4": {
