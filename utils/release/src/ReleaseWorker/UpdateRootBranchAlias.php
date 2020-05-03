@@ -1,7 +1,7 @@
 <?php
 declare( strict_types=1 );
 
-namespace Tribe\Libs\Dev\ReleaseWorker\Release;
+namespace Tribe\Libs\Dev\ReleaseWorker;
 
 use PharIo\Version\Version;
 use Symplify\MonorepoBuilder\DevMasterAliasUpdater;

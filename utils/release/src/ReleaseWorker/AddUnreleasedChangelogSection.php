@@ -1,7 +1,7 @@
 <?php
 declare( strict_types=1 );
 
-namespace Tribe\Libs\Dev\ReleaseWorker\Release;
+namespace Tribe\Libs\Dev\ReleaseWorker;
 
 use Nette\Utils\FileSystem;
 use Nette\Utils\Strings;
