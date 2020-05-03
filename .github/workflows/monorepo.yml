@@ -45,4 +45,4 @@ jobs:
         run: composer install --prefer-dist --no-progress --no-suggest --optimize-autoloader
 
       - name: Split the package mini-repos
-        run: vendor/bin/monorepo-builder split ${{ steps.git-tag.outputs.tag }}
+        run: vendor/bin/monorepo-builder split --tag=${{ steps.git-tag.outputs.tag }}
