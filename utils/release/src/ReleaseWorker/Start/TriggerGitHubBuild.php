@@ -31,7 +31,7 @@ class TriggerGitHubBuild implements ReleaseWorkerInterface, StageAwareInterface 
 	public function __construct( ProcessRunner $processRunner, string $githubAuthToken = '' ) {
 		$this->processRunner   = $processRunner;
 		$this->githubAuthToken = $this->validateGithubAuthToken( $githubAuthToken );
-		$this->repo = $this->getRepo();
+		$this->repo            = $this->getRepo();
 	}
 
 	public function getDescription( Version $version ): string {
@@ -46,7 +46,9 @@ class TriggerGitHubBuild implements ReleaseWorkerInterface, StageAwareInterface 
 		$url     = $this->getDispatchUrl();
 		$headers = $this->getDispatchHeaders();
 		$body    = $this->getDispatchBody( $version );
+		$client  = new \GuzzleHttp\Client( [ 'timeout' => 2 ] );
 		$request = new Request( 'POST', $url, $headers, $body );
+		$client->send( $request );
 	}
 
 	private function getDispatchUrl(): string {

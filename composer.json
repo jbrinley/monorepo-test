@@ -11,6 +11,7 @@
         "php-di/php-di": "^6.0"
     },
     "require-dev": {
+        "guzzlehttp/guzzle": "~6.0",
         "guzzlehttp/psr7": "^1.6",
         "symplify/monorepo-builder": "^6.0 || ^7.0"
     },
