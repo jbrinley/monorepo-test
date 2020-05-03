@@ -30,7 +30,7 @@ class TriggerGitHubBuild implements ReleaseWorkerInterface, StageAwareInterface 
 
 	public function __construct( ProcessRunner $processRunner, string $githubAuthToken = '' ) {
 		$this->processRunner   = $processRunner;
-		$this->githubAuthToken = $this->validateGithubAuthToken( $githubAuthToken );
+		$this->githubAuthToken = $githubAuthToken;
 		$this->repo            = $this->getRepo();
 	}
 
@@ -43,6 +43,7 @@ class TriggerGitHubBuild implements ReleaseWorkerInterface, StageAwareInterface 
 	}
 
 	public function work( Version $version ): void {
+		$this->validateGithubAuthToken( $this->githubAuthToken );
 		$url     = $this->getDispatchUrl();
 		$headers = $this->getDispatchHeaders();
 		$body    = $this->getDispatchBody( $version );
