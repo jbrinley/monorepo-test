@@ -20,7 +20,7 @@ jobs:
 
       - name: Get git tag name
         id: git-tag
-        run: echo "::set-output name=tag::$(echo ${GITHUB_REF:10})
+        run: echo "::set-output name=tag::$(echo ${GITHUB_REF:10})"
 
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
