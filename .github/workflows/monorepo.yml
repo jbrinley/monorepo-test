@@ -6,7 +6,7 @@ on:
 
 jobs:
 
-  ci:
+  release:
     runs-on: ubuntu-latest
 
     env:
