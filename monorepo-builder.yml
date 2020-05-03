@@ -23,8 +23,8 @@ parameters:
 
   # for "split" command
   directories_to_repositories:
-    src/CLI: "git@github.com:jbrinley/monorepo-cli.git"
-    src/Container: "git@github.com:jbrinley/monorepo-container.git"
+    src/CLI: "https://github.com/jbrinley/monorepo-cli.git"
+    src/Container: "https://github.com/jbrinley/monorepo-container.git"
 
 services:
   _defaults:
