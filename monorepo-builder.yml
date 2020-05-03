@@ -23,7 +23,7 @@ parameters:
 
   # for "split" command
   directories_to_repositories:
-    src/CLI: "https://github.com/jbrinley/monorepo-cli.git"
+    #src/CLI: "https://github.com/jbrinley/monorepo-cli.git"
     src/Container: "https://github.com/jbrinley/monorepo-container.git"
 
 services:
@@ -32,3 +32,7 @@ services:
 
   Tribe\Libs\Dev\:
     resource: "./utils/release/src"
+
+  Symplify\MonorepoBuilder\Split\Git\GitManager:
+    arguments:
+      $githubToken: '%env(default::GITHUB_TOKEN)%'

@@ -45,4 +45,6 @@ jobs:
         run: composer install --prefer-dist --no-progress --no-suggest --optimize-autoloader
 
       - name: Split the package mini-repos
+        env:
+          GITHUB_TOKEN: ${{ secrets.MONOREPO_TOKEN }}
         run: vendor/bin/monorepo-builder split --tag=${{ steps.git-tag.outputs.tag }}
