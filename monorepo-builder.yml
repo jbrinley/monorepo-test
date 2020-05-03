@@ -1,0 +1,38 @@
+parameters:
+  enable_default_release_workers: false
+  is_stage_required: true
+
+  package_directories:
+    - 'src'
+
+  # for "merge" command
+  merge_sections:
+    - 'require'
+    - 'require-dev'
+    - 'autoload'
+    - 'autoload-dev'
+    - 'repositories'
+
+  data_to_append:
+    autoload-dev:
+      psr-4:
+        'Tribe\Libs\Dev\': 'utils/release/src'
+    require-dev:
+      guzzlehttp/psr7: "^1.6"
+      symplify/monorepo-builder: '^6.0 || ^7.0'
+
+  # for "split" command
+  directories_to_repositories:
+    src/CLI: "git@github.com:jbrinley/monorepo-cli.git"
+    src/Container: "git@github.com:jbrinley/monorepo-container.git"
+
+services:
+  _defaults:
+    autowire: true
+
+  Tribe\Libs\Dev\:
+    resource: "./utils/release/src"
+
+  Tribe\Libs\Dev\ReleaseWorker\Start\TriggerGitHubBuild:
+    arguments:
+      $githubAuthToken: '%env(GITHUB_AUTH_TOKEN)%'

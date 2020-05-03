@@ -1,0 +1,25 @@
+{
+    "name": "jbrinley/monorepo-container",
+    "type": "library",
+    "description": "A dependency injection container wrapper for square one",
+    "license": "GPL-2.0-only",
+    "config": {
+        "vendor-dir": "vendor",
+        "preferred-install": "dist"
+    },
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^7.0",
+        "php-di/php-di": "^6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Tribe\\Libs\\Container\\": ""
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "2.2-dev"
+        }
+    }
+}

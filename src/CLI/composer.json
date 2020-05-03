@@ -1,0 +1,25 @@
+{
+    "name": "jbrinley/monorepo-cli",
+    "type": "library",
+    "description": "A framework for registering wp-cli commands in square one",
+    "license": "GPL-2.0-only",
+    "config": {
+        "vendor-dir": "vendor",
+        "preferred-install": "dist"
+    },
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^7.0",
+        "jbrinley/monorepo-container": "^2.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Tribe\\Libs\\CLI\\": ""
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "2.2-dev"
+        }
+    }
+}
