@@ -18,8 +18,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - run: |
+      - name: Fetch git history
+        run: |
           git fetch --prune --unshallow
+          git checkout master
 
       - name: Get git tag name
         id: git-tag
