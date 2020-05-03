@@ -7,10 +7,8 @@ use Nette\Utils\FileSystem;
 use Nette\Utils\Strings;
 use PharIo\Version\Version;
 use Symplify\MonorepoBuilder\Release\Contract\ReleaseWorker\ReleaseWorkerInterface;
-use Symplify\MonorepoBuilder\Release\Contract\ReleaseWorker\StageAwareInterface;
 
-class AddUnreleasedChangelogSection implements ReleaseWorkerInterface, StageAwareInterface {
-	use ReleaseStageTrait;
+class AddUnreleasedChangelogSection implements ReleaseWorkerInterface {
 
 	public function getPriority(): int {
 		return 90;

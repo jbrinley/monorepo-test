@@ -7,11 +7,9 @@ use PharIo\Version\Version;
 use Symplify\MonorepoBuilder\DevMasterAliasUpdater;
 use Symplify\MonorepoBuilder\FileSystem\ComposerJsonProvider;
 use Symplify\MonorepoBuilder\Release\Contract\ReleaseWorker\ReleaseWorkerInterface;
-use Symplify\MonorepoBuilder\Release\Contract\ReleaseWorker\StageAwareInterface;
 use Symplify\MonorepoBuilder\Utils\VersionUtils;
 
-class UpdateRootBranchAlias implements ReleaseWorkerInterface, StageAwareInterface {
-	use ReleaseStageTrait;
+class UpdateRootBranchAlias implements ReleaseWorkerInterface {
 
 	/**
 	 * @var DevMasterAliasUpdater

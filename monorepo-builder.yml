@@ -1,6 +1,6 @@
 parameters:
-  enable_default_release_workers: false
-  is_stage_required: true
+  enable_default_release_workers: true
+  is_stage_required: false
 
   package_directories:
     - 'src'
@@ -32,7 +32,3 @@ services:
 
   Tribe\Libs\Dev\:
     resource: "./utils/release/src"
-
-  Tribe\Libs\Dev\ReleaseWorker\Start\TriggerGitHubBuild:
-    arguments:
-      $githubAuthToken: '%env(GITHUB_AUTH_TOKEN)%'
