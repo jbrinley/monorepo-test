@@ -18,6 +18,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
+      - name: Get git tag name
+        id: git-tag
+        run: echo "::set-output name=tag::$(echo ${GITHUB_REF:10})
+
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
@@ -41,4 +45,4 @@ jobs:
         run: composer install --prefer-dist --no-progress --no-suggest --optimize-autoloader
 
       - name: Split the package mini-repos
-        run: vendor/bin/monorepo-builder split
+        run: vendor/bin/monorepo-builder split ${{ steps.git-tag.outputs.tag }}
