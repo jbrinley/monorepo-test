@@ -1,17 +1,23 @@
 {
     "name": "jbrinley/monorepo-test",
-    "type": "library",
+    "replace": {
+        "jbrinley/monorepo-cli": "self.version",
+        "jbrinley/monorepo-container": "self.version"
+    },
     "description": "A library for use on Modern Tribe service projects.",
     "license": "GPL-2.0-only",
     "require": {
-        "php": "^7.0"
+        "php": "^7.0",
+        "php-di/php-di": "^6.0"
     },
     "require-dev": {
-        "symplify/monorepo-builder": "^6.0 || ^7.0",
-        "guzzlehttp/psr7": "^1.4"
+        "guzzlehttp/psr7": "^1.6",
+        "symplify/monorepo-builder": "^6.0 || ^7.0"
     },
     "autoload": {
         "psr-4": {
+            "Tribe\\Libs\\CLI\\": "src/CLI/",
+            "Tribe\\Libs\\Container\\": "src/Container/"
         }
     },
     "autoload-dev": {

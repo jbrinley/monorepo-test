@@ -1,9 +1,8 @@
 #!/usr/bin/env bash
 
 SCRIPTDIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
-PROJECTDIR=$( cd "$SCRIPTDIR" && cd ../.. && pwd )
 
-cd "$PROJECTDIR"
+cd "$SCRIPTDIR"
 
 ENV_FILE=.env
 
@@ -13,4 +12,4 @@ if [ ! -f ${ENV_FILE} ]; then
 fi
 
 source "$ENV_FILE"
-GITHUB_AUTH_TOKEN=$GITHUB_AUTH_TOKEN php -dxdebug.remote_enable=1 -dxdebug.remote_autostart=1 ./vendor/bin/monorepo-builder release "$@"
+GITHUB_AUTH_TOKEN=$GITHUB_AUTH_TOKEN php -dxdebug.remote_enable=1 -dxdebug.remote_autostart=1 ./vendor/bin/monorepo-builder "$@"
