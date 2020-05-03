@@ -19,21 +19,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Setup PHP extension cache
-        id: cache-php-extensions
-        uses: shivammathur/cache-extensions@v1
-        with:
-          php-version: ${{ env.php_version }}
-          extensions: ${{ env.php_extensions }}
-          key: ${{ env.cache_version }}-phpextensions-${{ env.php_version }}
-
-      - name: Cache PHP extensions
-        uses: actions/cache@v1
-        with:
-          path: ${{ steps.cache-php-extensions.outputs.dir }}
-          key: ${{ steps.cache-php-extensions.outputs.key }}
-          restore-keys: ${{ steps.cache-php-extensions.outputs.key }}
-
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
