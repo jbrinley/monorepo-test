@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "90fabdd125b829c341bb853a2e54fb47",
+    "content-hash": "ee7e5c1960e23277b53a552ca4afb0f1",
     "packages": [
         {
             "name": "jeremeamia/superclosure",
@@ -199,12 +199,12 @@
             },
             "type": "library",
             "autoload": {
-                "psr-4": {
-                    "DI\\": "src/"
-                },
                 "files": [
                     "src/functions.php"
-                ]
+                ],
+                "psr-4": {
+                    "DI\\": "src/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -344,12 +344,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Php56\\": ""
-                },
                 "files": [
                     "bootstrap.php"
-                ]
+                ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Php56\\": ""
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -820,12 +820,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "GuzzleHttp\\": "src/"
-                },
                 "files": [
                     "src/functions_include.php"
-                ]
+                ],
+                "psr-4": {
+                    "GuzzleHttp\\": "src/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -878,12 +878,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "GuzzleHttp\\Promise\\": "src/"
-                },
                 "files": [
                     "src/functions_include.php"
-                ]
+                ],
+                "psr-4": {
+                    "GuzzleHttp\\Promise\\": "src/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -904,16 +904,16 @@
         },
         {
             "name": "guzzlehttp/psr7",
-            "version": "1.6.1",
+            "version": "1.8.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/psr7.git",
-                "reference": "239400de7a173fe9901b9ac7c06497751f00727a"
+                "reference": "902db15a551a4a415e732b622282e21ce1b508b4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/psr7/zipball/239400de7a173fe9901b9ac7c06497751f00727a",
-                "reference": "239400de7a173fe9901b9ac7c06497751f00727a",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/902db15a551a4a415e732b622282e21ce1b508b4",
+                "reference": "902db15a551a4a415e732b622282e21ce1b508b4",
                 "shasum": ""
             },
             "require": {
@@ -926,24 +926,24 @@
             },
             "require-dev": {
                 "ext-zlib": "*",
-                "phpunit/phpunit": "~4.8.36 || ^5.7.27 || ^6.5.8"
+                "phpunit/phpunit": "~4.8.36 || ^5.7.27 || ^6.5.14 || ^7.5.20 || ^8.5.8 || ^9.3.10"
             },
             "suggest": {
-                "zendframework/zend-httphandlerrunner": "Emit PSR-7 responses"
+                "laminas/laminas-httphandlerrunner": "Emit PSR-7 responses"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.6-dev"
+                    "dev-master": "1.7-dev"
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "GuzzleHttp\\Psr7\\": "src/"
-                },
                 "files": [
                     "src/functions_include.php"
-                ]
+                ],
+                "psr-4": {
+                    "GuzzleHttp\\Psr7\\": "src/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -951,12 +951,33 @@
             ],
             "authors": [
                 {
+                    "name": "Graham Campbell",
+                    "email": "hello@gjcampbell.co.uk",
+                    "homepage": "https://github.com/GrahamCampbell"
+                },
+                {
                     "name": "Michael Dowling",
                     "email": "mtdowling@gmail.com",
                     "homepage": "https://github.com/mtdowling"
                 },
                 {
+                    "name": "George Mponos",
+                    "email": "gmponos@gmail.com",
+                    "homepage": "https://github.com/gmponos"
+                },
+                {
+                    "name": "Tobias Nyholm",
+                    "email": "tobias.nyholm@gmail.com",
+                    "homepage": "https://github.com/Nyholm"
+                },
+                {
+                    "name": "Márk Sági-Kazár",
+                    "email": "mark.sagikazar@gmail.com",
+                    "homepage": "https://github.com/sagikazarmark"
+                },
+                {
                     "name": "Tobias Schultze",
+                    "email": "webmaster@tubo-world.de",
                     "homepage": "https://github.com/Tobion"
                 }
             ],
@@ -971,7 +992,21 @@
                 "uri",
                 "url"
             ],
-            "time": "2019-07-01T23:21:34+00:00"
+            "funding": [
+                {
+                    "url": "https://github.com/GrahamCampbell",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/Nyholm",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/guzzlehttp/psr7",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2022-03-20T13:44:44+00:00"
         },
         {
             "name": "justinrainbow/json-schema",
@@ -2389,12 +2424,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Ctype\\": ""
-                },
                 "files": [
                     "bootstrap.php"
-                ]
+                ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Ctype\\": ""
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -2463,12 +2498,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Intl\\Idn\\": ""
-                },
                 "files": [
                     "bootstrap.php"
-                ]
+                ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Intl\\Idn\\": ""
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -2537,12 +2572,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Mbstring\\": ""
-                },
                 "files": [
                     "bootstrap.php"
-                ]
+                ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Mbstring\\": ""
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -2607,12 +2642,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Php72\\": ""
-                },
                 "files": [
                     "bootstrap.php"
-                ]
+                ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Php72\\": ""
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -2676,12 +2711,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Php73\\": ""
-                },
                 "files": [
                     "bootstrap.php"
                 ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Php73\\": ""
+                },
                 "classmap": [
                     "Resources/stubs"
                 ]
@@ -3013,12 +3048,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symplify/auto-bind-parameter.git",
-                "reference": "c8ac283516122a923b7a999f88ec87c4a28f1af8"
+                "reference": "edf14cfb289d1eba55435d19325ddd3bda2da2a1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symplify/auto-bind-parameter/zipball/c8ac283516122a923b7a999f88ec87c4a28f1af8",
-                "reference": "c8ac283516122a923b7a999f88ec87c4a28f1af8",
+                "url": "https://api.github.com/repos/symplify/auto-bind-parameter/zipball/edf14cfb289d1eba55435d19325ddd3bda2da2a1",
+                "reference": "edf14cfb289d1eba55435d19325ddd3bda2da2a1",
                 "shasum": ""
             },
             "require": {
@@ -3053,6 +3088,7 @@
                     "type": "github"
                 }
             ],
+            "abandoned": "symplify/package-builder",
             "time": "2020-05-02T21:07:42+00:00"
         },
         {
@@ -3061,12 +3097,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symplify/autowire-array-parameter.git",
-                "reference": "0f8107a38cc214135b2fa4ea45e43ce26100c9ac"
+                "reference": "1b01e1cf7ea839e6ade7c3f4f126f9a428e30e9b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symplify/autowire-array-parameter/zipball/0f8107a38cc214135b2fa4ea45e43ce26100c9ac",
-                "reference": "0f8107a38cc214135b2fa4ea45e43ce26100c9ac",
+                "url": "https://api.github.com/repos/symplify/autowire-array-parameter/zipball/1b01e1cf7ea839e6ade7c3f4f126f9a428e30e9b",
+                "reference": "1b01e1cf7ea839e6ade7c3f4f126f9a428e30e9b",
                 "shasum": ""
             },
             "require": {
@@ -3108,12 +3144,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symplify/composer-json-manipulator.git",
-                "reference": "5268c9fec1b7a1864a74751b77ecbfc499129ced"
+                "reference": "2864b9c3496d4128ff815e10d2787738357bec82"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symplify/composer-json-manipulator/zipball/5268c9fec1b7a1864a74751b77ecbfc499129ced",
-                "reference": "5268c9fec1b7a1864a74751b77ecbfc499129ced",
+                "url": "https://api.github.com/repos/symplify/composer-json-manipulator/zipball/2864b9c3496d4128ff815e10d2787738357bec82",
+                "reference": "2864b9c3496d4128ff815e10d2787738357bec82",
                 "shasum": ""
             },
             "require": {
@@ -3160,12 +3196,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symplify/monorepo-builder.git",
-                "reference": "c7dbfc4e523e11f2c8078c44ed099bb599fcb4b6"
+                "reference": "58b9c5d3442d9ffe68d1b7027850876030007c71"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symplify/monorepo-builder/zipball/c7dbfc4e523e11f2c8078c44ed099bb599fcb4b6",
-                "reference": "c7dbfc4e523e11f2c8078c44ed099bb599fcb4b6",
+                "url": "https://api.github.com/repos/symplify/monorepo-builder/zipball/58b9c5d3442d9ffe68d1b7027850876030007c71",
+                "reference": "58b9c5d3442d9ffe68d1b7027850876030007c71",
                 "shasum": ""
             },
             "require": {
@@ -3198,11 +3234,11 @@
             "autoload": {
                 "psr-4": {
                     "Symplify\\MonorepoBuilder\\": "src",
+                    "Symplify\\MonorepoBuilder\\Init\\": "packages/init/src",
+                    "Symplify\\MonorepoBuilder\\Merge\\": "packages/merge/src",
                     "Symplify\\MonorepoBuilder\\Split\\": "packages/split/src",
                     "Symplify\\MonorepoBuilder\\Release\\": "packages/release/src",
-                    "Symplify\\MonorepoBuilder\\Init\\": "packages/init/src",
-                    "Symplify\\MonorepoBuilder\\Testing\\": "packages/testing/src",
-                    "Symplify\\MonorepoBuilder\\Merge\\": "packages/merge/src"
+                    "Symplify\\MonorepoBuilder\\Testing\\": "packages/testing/src"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -3224,12 +3260,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symplify/package-builder.git",
-                "reference": "675cc1db37d02a7d50ed06506ace97f0d4aa24f4"
+                "reference": "07962a8fb6352d70f1125f7da9544bc39661ec3f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symplify/package-builder/zipball/675cc1db37d02a7d50ed06506ace97f0d4aa24f4",
-                "reference": "675cc1db37d02a7d50ed06506ace97f0d4aa24f4",
+                "url": "https://api.github.com/repos/symplify/package-builder/zipball/07962a8fb6352d70f1125f7da9544bc39661ec3f",
+                "reference": "07962a8fb6352d70f1125f7da9544bc39661ec3f",
                 "shasum": ""
             },
             "require": {
@@ -3276,12 +3312,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symplify/set-config-resolver.git",
-                "reference": "17dfb977d99cb88aae58a264b813e9d54a815900"
+                "reference": "be91586daecd72fcbe74e6e5dddaa977d7464c38"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symplify/set-config-resolver/zipball/17dfb977d99cb88aae58a264b813e9d54a815900",
-                "reference": "17dfb977d99cb88aae58a264b813e9d54a815900",
+                "url": "https://api.github.com/repos/symplify/set-config-resolver/zipball/be91586daecd72fcbe74e6e5dddaa977d7464c38",
+                "reference": "be91586daecd72fcbe74e6e5dddaa977d7464c38",
                 "shasum": ""
             },
             "require": {
@@ -3317,6 +3353,7 @@
                     "type": "github"
                 }
             ],
+            "abandoned": true,
             "time": "2020-05-02T21:07:42+00:00"
         },
         {
@@ -3325,12 +3362,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symplify/smart-file-system.git",
-                "reference": "7e562c6671566d3d5ab22d1d8c44adee2af83ff8"
+                "reference": "989d0519765c5bb6f3874b75a764512f9e8bedb9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symplify/smart-file-system/zipball/7e562c6671566d3d5ab22d1d8c44adee2af83ff8",
-                "reference": "7e562c6671566d3d5ab22d1d8c44adee2af83ff8",
+                "url": "https://api.github.com/repos/symplify/smart-file-system/zipball/989d0519765c5bb6f3874b75a764512f9e8bedb9",
+                "reference": "989d0519765c5bb6f3874b75a764512f9e8bedb9",
                 "shasum": ""
             },
             "require": {
